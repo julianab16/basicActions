@@ -149,6 +149,26 @@ Every **Pull Request (PR)** triggers the workflow:
 
 ---
 
+## 🚨 MANDATORY: STUDENT CONFIGURATION REQUIRED 🚨
+
+> ⚠️ **Attention all students:**  
+> You **must configure and demonstrate** the following tools by yourselves as part of your project delivery.
+
+Each team or student is responsible for:
+- ✅ **Adding ESLint** (code style and syntax rules)  
+- ✅ **Enabling Code Coverage reports** (e.g., via Jest or another tool)  
+- ✅ **Measuring Cyclomatic Complexity** (to analyze the complexity of your functions)
+
+💬 During your final submission, you must **explain and show evidence** of:
+- How each of these tools was configured.  
+- What results or metrics were obtained.  
+- How those metrics help improve software quality.
+
+> These configurations are **not pre-installed** in the repository.  
+> You are expected to investigate, implement, and document them as part of your learning process.
+
+---
+
 ### ✅ Example workflow summary
 | Stage | Trigger | Description |
 |-------|----------|-------------|
