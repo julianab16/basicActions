@@ -17,8 +17,12 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-      - run: npm ci
-      - run: npm test
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
 
   # 🚀 Runs only after merge (push to main)
   ready-for-production:
