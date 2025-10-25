@@ -228,14 +228,13 @@ This is a **collaborative project** — everyone in the group must:
 
 | Command | Purpose |
 |----------|----------|
-| `npm install` | Install all dependencies |
+| `npm install --legacy-peer-deps` | Install all dependencies |
+| `npm install -g complexity-report` | Install a global tool to generate a detailed cyclomatic complexity |
 | `npm test` | Run all tests |
-| `npm install --save-dev eslint jest eslint-plugin-n eslint-config-standard eslint-plugin-jest --legacy-peer-deps` | Install dependencies for coverage and syntax and code quality |
 | `npm run coverage` | Coverage report |
 | `npm run test:ci` | Run tests + coverage report |
 | `npm run lint` | Check syntax and code quality |
 | `npm run lint:fix` | Auto-fix lint issues |
-| `npm install -g complexity-report` | Install a global tool to generate a detailed cyclomatic complexity |
 | `npm run complexity` | Complexity report |
 
 ---

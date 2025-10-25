@@ -1,29 +1,39 @@
-// eslint.config.js
-const js = require("@eslint/js");
+import eslintPluginJest from 'eslint-plugin-jest';
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
-module.exports = [
-  js.configs.recommended,
+export default [
   {
+    files: ['**/*.js'],
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "commonjs",
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
-        require: "readonly",
-        module: "readonly",
-        __dirname: "readonly",
-        process: "readonly",
-        console: "readonly",
-        describe: "readonly",
-        test: "readonly",
-        expect: "readonly"
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        exports: 'writable',
+        module: 'writable',
+        require: 'readonly',
       }
     },
     rules: {
-      semi: ["error", "always"],
-      quotes: ["error", "double"],
-      "no-unused-vars": "warn",
-      complexity: ["warn", 10]
+      'complexity': ['warn', 10],
+      'no-unused-vars': 'warn',
+    }
+  },
+  {
+    files: ['**/*.test.js', '**/tests/**/*.js'],
+    plugins: {
+      jest: eslintPluginJest
+    },
+    languageOptions: {
+      globals: {
+        ...eslintPluginJest.environments.globals.globals,
+      }
+    },
+    rules: {
+      ...eslintPluginJest.configs.recommended.rules,
     }
   }
 ];
