@@ -55,9 +55,9 @@ describe("Level 3 – Basic Functions", () => {
 
   // -----------------------------
   test("factorialRecursive: should compute factorial recursively", () => {
-    expect(factorialRecursive(0)).toBe(1n);
-    expect(factorialRecursive(5)).toBe(120n);
-    expect(factorialRecursive(10)).toBe(3628800n);
+    expect(factorialRecursive(0)).toBe(1);
+    expect(factorialRecursive(5)).toBe(120);
+    expect(factorialRecursive(10)).toBe(3628800);
     expect(() => factorialRecursive(3.5)).toThrow("Input must be an integer");
     expect(() => factorialRecursive(-1)).toThrow("Input must be non-negative");
   });

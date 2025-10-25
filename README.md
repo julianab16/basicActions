@@ -230,7 +230,7 @@ This is a **collaborative project** — everyone in the group must:
 |----------|----------|
 | `npm install` | Install all dependencies |
 | `npm test` | Run all tests |
-| `npm install --save-dev eslint jest eslint-plugin-n eslint-config-standard eslint-plugin-jest` | Install dependencies for coverage and syntax and code quality |
+| `npm install --save-dev eslint jest eslint-plugin-n eslint-config-standard eslint-plugin-jest --legacy-peer-deps` | Install dependencies for coverage and syntax and code quality |
 | `npm run coverage` | Coverage report |
 | `npm run test:ci` | Run tests + coverage report |
 | `npm run lint` | Check syntax and code quality |

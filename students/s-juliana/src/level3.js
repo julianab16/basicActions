@@ -38,7 +38,6 @@ function passwordStrength(password) {
   const hasDigit = /[0-9]/.test(password);
   const hasSpecial = /[^A-Za-z0-9]/.test(password);
 
-
   const suggestions = [];
   if (length < 8) suggestions.push("Use at least 8 characters");
   if (!hasLower) suggestions.push("Add lowercase letters");
@@ -51,14 +50,13 @@ function passwordStrength(password) {
   };
 }
 
-// Factorial recursivo usando BigInt (lineal, cuidado con n grande)
+// Factorial recursivo
 function factorialRecursive(n) {
   if (typeof n !== "number" || !Number.isInteger(n)) throw new Error("Input must be an integer");
   if (n < 0) throw new Error("Input must be non-negative");
-  // Protege contra desbordamiento de pila en entornos JS normales
-  if (n > 1000) throw new Error("Input too large for recursive factorial (use iterative for big n)");
-  if (n === 0 || n === 1) return 1n;
-  return BigInt(n) * factorialRecursive(n - 1);
+  if (n > 170) throw new Error("Input too large for recursive factorial (use iterative for big n)");
+  if (n === 0 || n === 1) return 1;
+  return n * factorialRecursive(n - 1);
 }
 
 module.exports = { miniCalculator, passwordStrength, factorialRecursive };
