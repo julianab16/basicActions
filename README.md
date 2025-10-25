@@ -230,9 +230,13 @@ This is a **collaborative project** — everyone in the group must:
 |----------|----------|
 | `npm install` | Install all dependencies |
 | `npm test` | Run all tests |
+| `npm install --save-dev eslint jest eslint-plugin-n eslint-config-standard eslint-plugin-jest` | Install dependencies for coverage and syntax and code quality |
+| `npm run coverage` | Coverage report |
 | `npm run test:ci` | Run tests + coverage report |
 | `npm run lint` | Check syntax and code quality |
 | `npm run lint:fix` | Auto-fix lint issues |
+| `npm install -g complexity-report` | Install a global tool to generate a detailed cyclomatic complexity |
+| `npm run complexity` | Complexity report |
 
 ---
 
@@ -272,5 +276,3 @@ When all students have completed **Level 3**:
 🧩 **Instructor’s note:**  
 This repository simulates a real-world development workflow.  
 You’ll learn how modern teams work with **CI/CD, testing, quality gates, and branch protection** — essential skills for any DevOps or Cloud Engineer.
-
-test

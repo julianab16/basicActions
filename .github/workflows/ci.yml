@@ -23,6 +23,15 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: 🧹 Run ESLint (check style & syntax)
+        run: npm run lint
+
+      - name: 🧪 Run Jest with coverage
+        run: npm run test:ci
+        
+      - name: 📊 Run cyclomatic complexity analysis
+        run: npm run complexity
+
   # 🚀 Runs only after merge (push to main)
   ready-for-production:
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
