@@ -18,10 +18,22 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
+
+      - name: Install complexity
+        run: npm install -g complexity-report
 
       - name: Run tests
         run: npm test
+
+      - name: 🧹 Run ESLint (check style & syntax)
+        run: npm run lint
+
+      - name: 🧪 Run Jest with coverage
+        run: npm run test:ci
+        
+      - name: 📊 Run cyclomatic complexity analysis
+        run: npm run complexity
 
   # 🚀 Runs only after merge (push to main)
   ready-for-production:
