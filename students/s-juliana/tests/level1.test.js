@@ -6,6 +6,8 @@ describe("Level 1 – Basic Functions", () => {
     expect(addTwoNumbers(2, 3)).toBe(5);
     expect(addTwoNumbers(-1, 1)).toBe(0);
     expect(addTwoNumbers(0, 0)).toBe(0);
+    expect(addTwoNumbers(10, 20)).toBe(30);
+    expect(() => addTwoNumbers(NaN, 3)).toThrow("Input must be a number");
   });
 
   // -----------------------------
@@ -13,7 +15,7 @@ describe("Level 1 – Basic Functions", () => {
     expect(isNum(1)).toBe(true);
     expect(isNum(3)).toBe(true);
     expect(isNum(88)).toBe(true);
-    //expect(isNum('not a number')).toBe(false);
+    expect(() => isNum("string")).toThrow("Input must be a number");
   });
   
   // -----------------------------
