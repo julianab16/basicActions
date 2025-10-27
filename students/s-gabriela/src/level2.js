@@ -6,7 +6,7 @@ function contarPalabra(frase, palabra){
   }
   const palabras = frase.split(/\s+/)
   let cont = 0
-  for (p of palabras){
+  for (const p of palabras){
     if (p === palabra){
       cont+= 1
     }
