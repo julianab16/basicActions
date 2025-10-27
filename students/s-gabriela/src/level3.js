@@ -1,7 +1,6 @@
 //function 1
 
 function fibonacciSerie(n){
-  // Validaciones para nivel 3
   if (typeof n !== "number" || !Number.isInteger(n)) {
     throw new Error("El parametro debe ser un numero entero");
   }
@@ -12,12 +11,14 @@ function fibonacciSerie(n){
     throw new Error("Numero demasiado grande para fibonacci recursivo");
   }
 
-  // Casos base corregidos
-  if (n === 0) return 0;
-  if (n === 1) return 1;
-  
-  // Llamada recursiva corregida
-  return fibonacciSerie(n - 1) + fibonacciSerie(n - 2);
+  if (n === 0) return [0];
+  if (n === 1) return [0, 1];
+
+  let serie = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    serie.push(serie[i - 1] + serie[i - 2]);
+  }
+  return serie;
 }
 
 module.exports = { fibonacciSerie };
