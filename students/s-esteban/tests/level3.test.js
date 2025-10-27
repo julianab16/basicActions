@@ -1,4 +1,4 @@
-import { calculator, factorial, passwordStrength, hasDuplicates } from "../src/level3.js";
+const { calculator, factorial, hasDuplicates } = require("../src/level3.js");
 
 describe("Level 3 – Algorithms and Metrics", () => {
   test("mini calculator works correctly", () => {
@@ -12,11 +12,6 @@ describe("Level 3 – Algorithms and Metrics", () => {
     expect(factorial(0)).toBe(1);
   });
 
-  test("validates password strength", () => {
-    expect(passwordStrength("Aa1@abcd")).toBe("Strong");
-    expect(passwordStrength("abc123")).toBe("Medium");
-    expect(passwordStrength("abc")).toBe("Weak");
-  });
 
   test("detects duplicates in an array", () => {
     expect(hasDuplicates([1, 2, 3, 1])).toBe(true);

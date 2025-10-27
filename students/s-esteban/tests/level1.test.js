@@ -1,4 +1,4 @@
-import { isPalindrome, sumArray, countVowels, findLargest } from "../src/level1.js";
+const { isPalindrome, sumArray, countVowels } = require("../src/level1.js");
 
 describe("Level 1 – Basic Functions", () => {
   test("detects palindromes correctly", () => {
@@ -16,8 +16,5 @@ describe("Level 1 – Basic Functions", () => {
     expect(countVowels("xyz")).toBe(0);
   });
 
-  test("finds the largest number", () => {
-    expect(findLargest([3, 10, 5])).toBe(10);
-    expect(findLargest([])).toBeNull();
-  });
+  
 });

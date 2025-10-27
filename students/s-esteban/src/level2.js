@@ -1,7 +1,7 @@
 // LEVEL 2 – Intermediate Logic
 
 // first function
-export function toTitleCase(text) {
+function toTitleCase(text) {
   if (typeof text !== "string") return "";
   return text
     .toLowerCase()
@@ -10,7 +10,7 @@ export function toTitleCase(text) {
     .join(" ");
 }
 // second function
-export function fizzBuzz(n) {
+function fizzBuzz(n) {
   if (typeof n !== "number" || n <= 0) throw new Error("Input must be positive number");
   const result = [];
   for (let i = 1; i <= n; i++) {
@@ -23,10 +23,11 @@ export function fizzBuzz(n) {
 }
 
 // third function
-export function isIsogram(word) {
+function isIsogram(word) {
   if (typeof word !== "string") return false;
   const cleaned = word.toLowerCase().replace(/[^a-z]/g, "");
   const letters = new Set(cleaned);
   return letters.size === cleaned.length;
 }
 
+module.exports = { toTitleCase, fizzBuzz, isIsogram };

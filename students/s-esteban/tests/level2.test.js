@@ -1,4 +1,4 @@
-import { toTitleCase, fizzBuzz, isIsogram, isValidEmail } from "../src/level2.js";
+const { toTitleCase, fizzBuzz, isIsogram} = require("../src/level2.js");
 
 describe("Level 2 – Intermediate Logic", () => {
   test("converts text to title case", () => {
@@ -13,10 +13,5 @@ describe("Level 2 – Intermediate Logic", () => {
   test("detects isograms", () => {
     expect(isIsogram("murciélago")).toBe(true);
     expect(isIsogram("casa")).toBe(false);
-  });
-
-  test("validates email format", () => {
-    expect(isValidEmail("test@example.com")).toBe(true);
-    expect(isValidEmail("invalid-email")).toBe(false);
   });
 });

@@ -1,9 +1,7 @@
-
-
 // LEVEL 3 – Algorithms and Metrics
 
 // Mini calculator
-export function calculator(a, b, operation) {
+function calculator(a, b, operation) {
   if (typeof a !== "number" || typeof b !== "number") throw new Error("Invalid numbers");
   switch (operation) {
     case "add": return a + b;
@@ -15,14 +13,16 @@ export function calculator(a, b, operation) {
 }
 
 // recursive factorial
-export function factorial(n) {
+function factorial(n) {
   if (n < 0) throw new Error("Negative number not allowed");
   if (n === 0) return 1;
   return n * factorial(n - 1);
 }
   
 // Detect duplicates in an array
-export function hasDuplicates(arr) {
+function hasDuplicates(arr) {
   if (!Array.isArray(arr)) return false;
   return new Set(arr).size !== arr.length;
 }
+
+module.exports = { calculator, factorial, hasDuplicates };
