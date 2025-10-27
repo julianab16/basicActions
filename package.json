@@ -1,5 +1,5 @@
 {
-  "name": "node-tests-students",
+  "name": "tests-students",
   "private": true,
   "type": "module",
   "scripts": {
@@ -19,5 +19,11 @@
     "eslint-plugin-n": "^17.23.1",
     "jest": "^29.7.0",
     "typhonjs-escomplex": "^0.1.0"
-  }
+  },
+  "version": "1.0.0",
+  "description": "Welcome to your Node.js learning project!   This repository is designed to help you practice **writing clean code, unit testing, and collaborative development using GitHub Actions**.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
