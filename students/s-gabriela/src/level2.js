@@ -24,12 +24,12 @@ function numerosMenoresA(lista, num){
     throw new Error("El segundo parametro debe ser un numero");
   }
   const menores = [];
-  for (let numero in lista){
-    if (typeof lista[numero] !== "number") {
+  for (let numero of lista){
+    if (typeof numero !== "number") {
       throw new Error("El array debe contener solo numeros");
     }
-    if (lista[numero] < num){
-      menores.push(lista[numero]);
+    if (numero < num){
+      menores.push(numero);
     }
   }
   return menores
