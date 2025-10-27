@@ -25,11 +25,11 @@ function numerosMenoresA(lista, num){
   }
   const menores = [];
   for (let numero in lista){
-    if (typeof lista[i] !== "number") {
+    if (typeof lista[numero] !== "number") {
       throw new Error("El array debe contener solo numeros");
     }
     if (lista[numero] < num){
-      menores.push(lista[i]);
+      menores.push(lista[numero]);
     }
   }
   return menores
